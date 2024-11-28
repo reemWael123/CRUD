@@ -1,0 +1,55 @@
+<html>
+    <head>
+<link rel="stylesheet" href="./CSS/main.css">
+<link rel="stylesheet" href="./CSS/bootstrap.min.css">
+
+
+    </head>
+    <body>
+        <main class=" w-75 bg-info mx-auto p-3">
+        <section class="bg-info">
+            <div class="mb-2 input-form">
+                <label for="ProuductName"> ProuductName:</label>
+<input type="text " class="form-control" placeholder="ProuductName" id="ProuductName" oninput=" valodatinfun()">
+<p  class=" alert alert-danger d-none" id="messageName">invalid pattern</p>
+            </div>
+            <div class="mb-2 input-form">
+                <label for="ProuductPrice"> ProuductPrice:</label>
+<input type="number " class="form-control" placeholder="ProuductPrice" id="ProuductPrice" oninput="valodatinPrice()">
+ <p  class=" alert alert-danger d-none" id="messagePrice">invalid pattern</p> 
+            </div>
+            <div class="mb-2 input-form">
+                <label for="ProuductCategory"> ProuductCategory:</label>
+<input type="text " class="form-control" placeholder="ProuductCategory" id="ProuductCategory">
+            </div>
+            <div class="mb-2 input-form">
+                <label for="ProuductDescription">ProuductDescription:</label>
+<textarea  id="ProuductDescription" class=" form-control "></textarea>
+            </div>
+            <button class="btn btn-primary w-100" onclick="addprouduct()" id="add">Add Prouduct</button>
+            <button class="btn btn-primary w-100 d-none" id="upd" onclick="UpdateData()"> Upddate Prouduct</button>
+
+        </section>
+        <input type="text" placeholder="Search" class=" my-3  w-75 form-control mx-auto" id="SearchProduct" oninput="SearchData()"> 
+        <section class="mt-4 bg-light">
+            <table class="table ">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                    
+                     
+                </tbody>
+            </table></section>
+    </main>
+    
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/index.js"></script>
+    </body>
+</html>
